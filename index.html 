@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ዶ/ር ነስሪያ ስፔሻሊቲ የጥርስ ህክምና ክሊኒክ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/100x100.png?text=Logo" alt="Clinic Logo" class="logo">
+            <div class="header-text">
+                <h1>ዶ/ር ነስሪያ ስፔሻሊቲ የጥርስ ህክምና ክሊኒክ</h1>
+                <p>Dr. Nesria Speciality Dental Clinic</p>
+                <p>ስልክ: 0920 603410 / 0910 979978</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="middle-section">
+        <div class="image-gallery">
+            <img src="https://via.placeholder.com/600x400.png?text=Bright+Smile" alt="Smiling person" class="main-image">
+            <img src="https://via.placeholder.com/300x300.png?text=Braces" alt="Person with braces" class="small-image">
+        </div>
+        <div class="services">
+            <h2>የምንሰጣቸው አገልግሎቶች</h2>
+            <ul>
+                <li>ጥርስ መሙላት</li>
+                <li>የጥርስ ስር ህክምና</li>
+                <li>ጥርስ መትከል</li>
+                <li>ጥርስ መንቀል</li>
+                <li>የተወላገዱና የአበቃቀል ችግር ያለባቸውን ጥርሶች በብሬስ ማስተካከል</li>
+                <li>ጥርስ ማጠብ</li>
+                <li>ዴንቸር (ወጪ ገቢ ጥርስ)</li>
+                <li>የህፃናት ጥርስ ህክምና</li>
+                <li>የተሰበረ መንጋጋ መጠገን</li>
+                <li>መጥፎ የአፍ ጠረን ህክምና</li>
+                <li>መለስተኛ የአፍ ውስጥ ቀዶ ጥገና</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="address">
+            <p>አድራሻ፡ መካኒሳ አቦ ቤ/ክ ፊት ለፊት ኦሮሚያ ባንክ ያለበት MRH ህንፃ አንደኛ ፎቅ</p>
+        </div>
+        <div class="call-to-action">
+            <p><strong>ይደውሉልን ለቀጠሮ ይያዙ!</strong></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
