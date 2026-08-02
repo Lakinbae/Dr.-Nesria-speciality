@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Appointment | Dr. Nesria Dental Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur shadow-sm border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-cyan-600 text-white p-2.5 rounded-xl shadow-md"><i class="fa-solid fa-tooth text-xl"></i></div>
+                <div>
+                    <span class="block font-bold text-lg text-slate-900 dark:text-white leading-tight">Dr. Nesria</span>
+                    <span class="block text-xs font-medium text-cyan-600 dark:text-cyan-400 tracking-wider uppercase">Speciality Dental Clinic</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6 font-medium text-sm text-slate-600 dark:text-slate-300">
+                <a href="index.html" class="hover:text-cyan-600 transition">Home</a>
+                <a href="about.html" class="hover:text-cyan-600 transition">About Doctor</a>
+                <a href="services.html" class="hover:text-cyan-600 transition">Services</a>
+                <a href="results.html" class="hover:text-cyan-600 transition">Before & After</a>
+                <a href="reviews.html" class="hover:text-cyan-600 transition">Reviews</a>
+                <a href="payment.html" class="hover:text-cyan-600 transition">Payments</a>
+                <a href="location.html" class="hover:text-cyan-600 transition">Location</a>
+                <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800"><i id="theme-icon" class="fa-solid fa-moon"></i></button>
+                <a href="contact.html" class="bg-cyan-600 text-white px-5 py-2.5 rounded-lg">Schedule an Appointment</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact / Booking Section -->
+    <section class="py-20 bg-white dark:bg-slate-900 transition-colors">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 space-y-3">
+                <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-wider uppercase text-xs">Online Reservation</span>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Schedule an Appointment</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-sm">Fill out the form below or call <a href="tel:+251920603410" class="text-cyan-600 dark:text-cyan-400 font-bold underline">+251 920 60 34 10</a> to book your spot.</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-800 p-8 sm:p-10 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                <form action="https://formspree.io/f/xbjnwxyz" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Full Name</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:outline-none" placeholder="Abebe Kebede">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Phone Number</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:outline-none" placeholder="0911234567">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Preferred Date</label>
+                            <input type="date" name="date" required class="w-full px-4 py-3 bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Service Needed</label>
+                            <select name="service" class="w-full px-4 py-3 bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                                <option>General Consultation (Free)</option>
+                                <option>Tooth Filling / Cleaning</option>
+                                <option>Tooth Extraction</option>
+                                <option>Orthodontics / Braces</option>
+                                <option>Dental Implant</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-cyan-600 text-white py-4 rounded-xl font-bold shadow-lg hover:bg-cyan-700 transition">Schedule an Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-center">
+        <p class="text-sm">2026 Dr. Nesria Dental Clinic. Built for the 30D Challenge.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
