@@ -1,5 +1,3 @@
-// This file can be used for future interactive features
-// like a contact form or a photo gallery.
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle Functionality
     const themeToggleBtn = document.getElementById('theme-toggle');
