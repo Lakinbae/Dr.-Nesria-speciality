@@ -124,7 +124,7 @@
             }
         });
 
-        // AI Chat Simulator
+        // AI Chat Simulator with Dynamic Responses
         const aiForm = document.getElementById('ai-form');
         const userInput = document.getElementById('user-input');
         const chatWindow = document.getElementById('chat-window');
@@ -143,12 +143,21 @@
             chatWindow.scrollTop = chatWindow.scrollHeight;
 
             setTimeout(() => {
-                let aiResponse = "Based on your description, we recommend scheduling an initial consultation with Dr. Nesria for a definitive diagnosis.";
                 const lower = text.toLowerCase();
-                if (lower.includes('pain') || lower.includes('hurt') || lower.includes('ache')) {
-                    aiResponse = "Toothaches often stem from cavities or sensitivity. We strongly recommend booking an urgent check-up or filling session with us.";
-                } else if (lower.includes('bleed') || lower.includes('gum') || lower.includes('swollen')) {
-                    aiResponse = "Bleeding or swollen gums can indicate gingivitis. A professional dental scaling session is advised.";
+                let aiResponse = "Thank you for sharing your query. Every dental situation is unique, and we recommend scheduling an examination with Dr. Nesria for proper evaluation.";
+
+                if (lower.includes('pain') || lower.includes('hurt') || lower.includes('ache') || lower.includes('cold') || lower.includes('hot')) {
+                    aiResponse = "Sharp pain or sensitivity to hot/cold items often points to enamel wear, cavities, or a compromised nerve. We recommend booking a filling or root canal consultation with us.";
+                } else if (lower.includes('bleed') || lower.includes('blood') || lower.includes('gum') || lower.includes('swollen')) {
+                    aiResponse = "Bleeding or swollen gums during brushing can be early signs of gingivitis or gum inflammation. A professional scaling and teeth cleaning session can easily resolve this.";
+                } else if (lower.includes('missing') || lower.includes('lost') || lower.includes('gap') || lower.includes('replace')) {
+                    aiResponse = "For missing teeth or large gaps, modern treatments like dental implants, bridges, or dentures (ወጭ ገቢ ጥርስ) are excellent options to restore your bite and smile.";
+                } else if (lower.includes('crooked') || lower.includes('straight') || lower.includes('brace') || lower.includes('crowd')) {
+                    aiResponse = "Misaligned or overcrowded teeth can be effectively straightened using professional braces (Orthodontics) tailored specifically for your smile.";
+                } else if (lower.includes('breath') || lower.includes('smell') || lower.includes('odor')) {
+                    aiResponse = "Persistent bad breath (halitosis) is often linked to trapped food particles, tartar buildup, or gum issues. A professional cleaning and evaluation will help identify and treat the root cause.";
+                } else if (lower.includes('wisdom') || lower.includes('extract') || lower.includes('pull') || lower.includes('remove')) {
+                    aiResponse = "If you are experiencing severe crowding or impacted teeth, a gentle tooth extraction or minor oral surgery might be necessary. Dr. Nesria provides safe, comfortable extraction procedures.";
                 }
 
                 chatWindow.innerHTML += `
