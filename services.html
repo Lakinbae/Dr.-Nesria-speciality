@@ -3,181 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Dr. Nesria Dental Clinic</title>
+    <title>Treatments & Services | Dr. Nesria Dental Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+<body class="bg-gray-50 dark:bg-slate-950 text-slate-800 dark:text-gray-100 font-sans antialiased">
 
-    <!-- HEADER / NAVBAR -->
-    <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur shadow-sm border-b border-slate-100 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-3">
-                <div class="bg-cyan-600 text-white p-2.5 rounded-xl shadow-md"><i class="fa-solid fa-tooth text-xl"></i></div>
-                <div>
-                    <span class="block font-bold text-lg text-slate-900 dark:text-white leading-tight">Dr. Nesria</span>
-                    <span class="block text-xs font-medium text-cyan-600 dark:text-cyan-400 tracking-wider uppercase">Speciality Dental Clinic</span>
+    <section class="py-20 bg-gray-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-teal-700 dark:text-amber-400 font-bold tracking-wider uppercase text-sm">Comprehensive Dental Procedures</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Our Complete Treatments List</h2>
+                <p class="text-gray-600 dark:text-gray-300">Professional general, cosmetic, and specialty dental solutions tailored for you.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-tooth"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">ጥርስ መሙላት (Filling)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Restoring decayed or damaged teeth using high-grade composite materials.</p>
                 </div>
-            </a>
-            <nav class="hidden md:flex items-center space-x-6 font-medium text-sm text-slate-600 dark:text-slate-300">
-                <a href="index.html" class="hover:text-cyan-600 transition">Home</a>
-                <a href="about.html" class="hover:text-cyan-600 transition">About Doctor</a>
-                <a href="services.html" class="text-cyan-600 dark:text-cyan-400 font-semibold">Services</a>
-                <a href="ai-assistant.html" class="hover:text-cyan-600 transition flex items-center space-x-1.5"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Advisor</span></a>
-                <a href="results.html" class="hover:text-cyan-600 transition">Before & After</a>
-                <a href="reviews.html" class="hover:text-cyan-600 transition">Reviews</a>
-                <a href="payment.html" class="hover:text-cyan-600 transition">Payments</a>
-                <a href="location.html" class="hover:text-cyan-600 transition">Location</a>
-                <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800"><i id="theme-icon" class="fa-solid fa-moon"></i></button>
-                <a href="contact.html" class="bg-cyan-600 text-white px-5 py-2.5 rounded-xl hover:bg-cyan-700 transition shadow-sm">Schedule Appointment</a>
-            </nav>
-            <div class="flex items-center space-x-3 md:hidden">
-                <button id="mobile-theme-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800"><i class="fa-solid fa-moon"></i></button>
-                <button id="hamburger-btn" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800"><i class="fa-solid fa-bars text-xl"></i></button>
-            </div>
-        </div>
-    </header>
-
-    <!-- MOBILE DRAWER -->
-    <div id="mobile-menu" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden md:hidden">
-        <div class="absolute right-0 top-0 bottom-0 w-4/5 max-w-sm bg-white dark:bg-slate-900 shadow-2xl p-6 flex flex-col justify-between space-y-6 overflow-y-auto">
-            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
-                <span class="font-bold text-slate-900 dark:text-white">Menu</span>
-                <button id="close-menu-btn" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500"><i class="fa-solid fa-xmark text-lg"></i></button>
-            </div>
-            <div class="flex flex-col space-y-2 font-medium text-slate-700 dark:text-slate-300">
-                <a href="index.html" class="p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">Home</a>
-                <a href="about.html" class="p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">About Doctor</a>
-                <a href="services.html" class="p-3 rounded-xl bg-cyan-50 dark:bg-cyan-950/50 text-cyan-600 font-semibold">Services</a>
-                <a href="ai-assistant.html" class="p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center space-x-2"><i class="fa-solid fa-wand-magic-sparkles text-cyan-600"></i><span>AI Advisor</span></a>
-                <a href="results.html" class="p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">Before & After</a>
-                <a href="reviews.html" class="p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">Reviews</a>
-                <a href="payment.html" class="p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">Payments</a>
-                <a href="location.html" class="p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">Location</a>
-            </div>
-            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-3">
-                <a href="tel:+251920603410" class="flex items-center justify-center space-x-2 w-full py-3 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm">
-                    <i class="fa-solid fa-phone text-cyan-600"></i><span>+251 920 603 410</span>
-                </a>
-                <a href="contact.html" class="block text-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 rounded-xl shadow-md transition">Schedule Appointment</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- SERVICES GRID -->
-    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div class="text-center space-y-3">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Our Speciality Treatments</h1>
-            <p class="text-slate-600 dark:text-slate-300 max-w-xl mx-auto text-sm sm:text-base">Comprehensive, high-tech dental care tailored for you and your family.</p>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- 1. Filling -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-fill-drip"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">ጥርስ መሙላት (Filling)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Restoration of decayed or damaged teeth using high-quality tooth-colored filling materials.</p>
-            </div>
-            <!-- 2. Tooth Extraction -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-hand-holding-medical"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">ጥርስ ማውጣት / መንቀል (Tooth Extraction)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Safe and gentle removal of severely decayed, damaged, or problematic teeth.</p>
-            </div>
-            <!-- 3. Cleaning -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-tooth"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">ጥርስ ማጽዳት (Cleaning)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Removal of plaque and tartar buildup to protect gums and preserve bright dental hygiene.</p>
-            </div>
-            <!-- 4. Implant -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">ጥርስ መትከል (Implant)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Permanent, natural-looking tooth replacement solutions for missing teeth.</p>
-            </div>
-            <!-- 5. Orthodontics -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-face-smile"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">ጥርስ ማስተካከል (Orthodontics)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Straightening misaligned teeth and correcting bite patterns for a balanced smile.</p>
-            </div>
-            <!-- 6. Root Canal Treatment -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-syringe"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">የጥርስ ስር ህክምና (Root Canal Treatment)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Pain-free restoration of damaged or infected inner tooth canals to save natural tooth structure.</p>
-            </div>
-            <!-- 7. Denture -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-teeth"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">ዴንቸር (ወጭ ገቢ ጥርስ) (Denture)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Custom removable replacement teeth designed to restore function and aesthetics.</p>
-            </div>
-            <!-- 8. Pediatric Dentistry -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-child"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">የህፃናት ጥርስ ህክምና (Pediatric Dentistry)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Specialized, gentle dental care catering specifically to infants, children, and teens.</p>
-            </div>
-            <!-- 9. Jaw Fracture Repair -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-user-doctor"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">የተሰበረ መንጋጋ መጠገን (Jaw Fracture Repair)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Surgical and clinical management of jawbone trauma and fractures.</p>
-            </div>
-            <!-- 10. Orthodontics for Crowding -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-bars-staggered"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">የተወላገዱና የአበቃቀል ችግር ያለባቸውን ጥርሶች በብሬስ ማስተካከል (Orthodontics for Crowding)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Specialized braces treatment to correct overcrowded, twisted, or irregularly erupting teeth.</p>
-            </div>
-            <!-- 11. Bad Breath Treatment -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-wind"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">መጥፎ የአፍ ጠረን ህክምና (Bad Breath Treatment)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Diagnostic and therapeutic solutions to permanently eliminate halitosis and gum odors.</p>
-            </div>
-            <!-- 12. Minor Oral Surgery -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-                <div class="bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-kit-medical"></i></div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">መለስተኛ የአፍ ውስጥ ቀዶ ጥገና (Minor Oral Surgery)</h3>
-                <p class="text-slate-600 dark:text-slate-300 text-sm">Expert minor surgical procedures inside the oral cavity performed with maximum comfort.</p>
+                <!-- Service 2 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-kit-medical"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">ጥርስ ማውጣት / መንቀል (Tooth Extraction)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Safe and painless tooth removal procedures performed under sterile conditions.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-sparkles"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">ጥርስ ማጽዳት (Cleaning)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Professional scaling and polishing to remove plaque and prevent gum diseases.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-gem"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">ጥርስ መትከል (Implant)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Permanent, natural-looking replacement roots and crowns for missing teeth.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-sliders"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">ጥርስ ማስተካከል / ብሬስ (Orthodontics)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Correcting misaligned or crooked teeth using precision braces.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-syringe"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">የጥርስ ስር ህክምና (Root Canal Treatment)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Advanced endodontic treatment to save infected or badly decayed teeth.</p>
+                </div>
+                <!-- Service 7 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-teeth"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">ዴንቸር (ወጭ ገቢ ጥርስ) (Denture)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Custom removable full and partial dentures designed for comfort and function.</p>
+                </div>
+                <!-- Service 8 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-child"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">የህፃናት ጥርስ ህክምና (Pediatric Dentistry)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Specialized, gentle dental care tailored specifically for children.</p>
+                </div>
+                <!-- Service 9 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">የተሰበረ መንጋጋ መጠገን (Jaw Fracture Repair)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Surgical stabilization and repair of jaw trauma and fractures.</p>
+                </div>
+                <!-- Service 10 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-bars-staggered"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">በብሬስ ማስተካከል (Orthodontics for Crowding)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Specialized alignment for overcrowded and irregularly positioned teeth.</p>
+                </div>
+                <!-- Service 11 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-wind"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">መጥፎ የአፍ ጠረን ህክምና (Bad Breath Treatment)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Diagnosing and treating underlying oral health issues causing halitosis.</p>
+                </div>
+                <!-- Service 12 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-900/10 text-teal-800 dark:text-amber-400 flex items-center justify-center font-bold"><i class="fa-solid fa-scalpel"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">መለስተኛ የአፍ ውስጥ ቀዶ ጥገና (Minor Oral Surgery)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Precise minor surgical interventions performed safely in-clinic.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <p class="font-bold text-white text-lg">Dr. Nesria Speciality Dental Clinic</p>
-            <p class="text-sm">Mekanisa, Addis Ababa, Ethiopia | Phone: +251 920 603 410</p>
-            <p class="text-xs text-slate-500 pt-4 border-t border-slate-800">&copy; 2026 Dr. Nesria Dental Clinic. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- SCRIPT -->
-    <script>
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const closeMenuBtn = document.getElementById('close-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
-        if (hamburgerBtn) hamburgerBtn.addEventListener('click', toggleMenu);
-        if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
-
-        const themeToggles = [document.getElementById('theme-toggle'), document.getElementById('mobile-theme-toggle')];
-        const htmlElement = document.documentElement;
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            htmlElement.classList.add('dark');
-        }
-        themeToggles.forEach(btn => {
-            if (btn) {
-                btn.addEventListener('click', () => {
-                    htmlElement.classList.toggle('dark');
-                    localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
-                });
-            }
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
