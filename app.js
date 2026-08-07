@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Dynamic Header & Mobile Navbar Injection (Price Menu Removed)
+    // 1. Dynamic Header & Mobile Navbar Injection
     const headerHTML = `
     <div class="bg-teal-900 text-white text-xs sm:text-sm py-2 px-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <!-- Desktop Navigation Links -->
             <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
                 <a href="index.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Home</a>
-                <a href="about.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">About Doctor</a>
-                <a href="services.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Treatments</a>
+                <a href="about.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">About Us</a>
+                <a href="services.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Services</a>
                 <a href="cases.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Gallery & Reviews</a>
-                <a href="contact.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Contact</a>
+                <a href="contact.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Contact & Booking</a>
             </nav>
 
             <div class="flex items-center gap-3">
@@ -52,14 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>
 
-        <!-- Mobile Dropdown Navigation Menu (Hidden by default) -->
+        <!-- Mobile Dropdown Navigation Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 px-6 py-4 shadow-xl transition-all">
             <nav class="flex flex-col gap-4 font-medium text-base">
                 <a href="index.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">Home</a>
-                <a href="about.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">About Doctor</a>
-                <a href="services.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">Treatments</a>
+                <a href="about.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">About Us</a>
+                <a href="services.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">Services</a>
                 <a href="cases.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">Gallery & Reviews</a>
-                <a href="contact.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1">Contact & Payment</a>
+                <a href="contact.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1">Contact & Online Booking</a>
                 <a href="tel:0920603410" class="mt-2 inline-flex items-center justify-center bg-teal-600 text-white px-5 py-3 rounded-xl font-medium text-sm shadow-md hover:bg-teal-700 transition">
                     <i class="fa-solid fa-phone-volume mr-2"></i> Call 0920 603410
                 </a>
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
     </header>`;
 
-    // 2. Dynamic Footer Injection
+    // 2. Dynamic Footer & Telegram Floating Button Injection
     const footerHTML = `
     <footer class="bg-slate-900 text-gray-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <div>
                 <p class="font-bold text-white text-sm mb-2">Social Channels</p>
                 <div class="flex flex-col gap-1 text-xs text-gray-400">
-                    <a href="#" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-telegram mr-1"></i> Telegram: Dr.Nesria speciality Dental clinic</a>
-                    <a href="#" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-tiktok mr-1"></i> TikTok: Dr.Nesria your Smile Specialis</a>
+                    <a href="https://t.me/DrNesriaDentalClinic" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-telegram mr-1"></i> Telegram Channel</a>
+                    <a href="https://tiktok.com/@drnesriadental" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-tiktok mr-1"></i> TikTok Profile</a>
                 </div>
             </div>
             <div>
@@ -92,7 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 border-t border-slate-800 text-center text-xs text-gray-500">
             © 2026 Dr. Nesria Speciality Dental Clinic. All Rights Reserved.
         </div>
-    </footer>`;
+    </footer>
+
+    <!-- Floating Telegram Quick Chat Button -->
+    <a href="https://t.me/DrNesriaDentalClinic" target="_blank" aria-label="Chat on Telegram" class="fixed bottom-6 right-6 z-50 bg-sky-500 hover:bg-sky-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
+        <i class="fa-brands fa-telegram text-2xl"></i>
+    </a>`;
 
     document.body.insertAdjacentHTML('afterbegin', headerHTML);
     document.body.insertAdjacentHTML('beforeend', footerHTML);

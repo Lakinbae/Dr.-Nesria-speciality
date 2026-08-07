@@ -3,85 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smile Gallery & Client Reviews | Dr. Nesria Dental</title>
+    <title>Gallery & Transformations | Dr. Nesria Dental</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class' }</script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .comparison-container { position: relative; overflow: hidden; }
+        .before-image { position: absolute; top: 0; left: 0; height: 100%; width: 50%; overflow: hidden; }
+        .comparison-slider { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #38bdf8; cursor: ew-resize; }
+    </style>
 </head>
 <body class="bg-gray-50 dark:bg-slate-950 text-slate-800 dark:text-gray-100 font-sans antialiased">
 
-    <!-- Smile Gallery Section -->
-    <section class="py-16 bg-white dark:bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
-                <span class="text-teal-700 dark:text-amber-400 font-bold uppercase tracking-wider text-sm">Transformations</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Before & During Treatment Showcase</h2>
-                <p class="text-gray-600 dark:text-gray-300 text-sm">Real visual results from our Filling and Orthodontic Braces procedures.</p>
+    <section class="py-20 bg-white dark:bg-slate-900 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-teal-700 dark:text-amber-400 font-bold uppercase tracking-wider text-sm">Real Patient Results</span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Smile Transformations</h1>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Drag the slider left or right on each case to compare before and after results.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Filling Case -->
-                <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-2xl border border-gray-100 dark:border-slate-700 space-y-4 shadow-sm">
-                    <h3 class="font-bold text-lg text-slate-900 dark:text-white">Tooth Filling Case (ጥርስ መሙላት)</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <p class="text-xs text-gray-500 mb-1">Before Filling</p>
-                            <img src="assets/images/before-filling.jpg" alt="Before Filing" class="case-img">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Case 1: Composite Filling -->
+                <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-3xl border border-gray-100 dark:border-slate-700 shadow-lg">
+                    <div id="comparison-1" class="comparison-container w-full h-80 rounded-2xl select-none">
+                        <img src="assets/images/after-filling.jpg" alt="After Filling" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-teal-800/80 text-white text-xs px-3 py-1 rounded-full font-bold">AFTER</span>
+
+                        <div id="before-box-1" class="before-image">
+                            <img src="assets/images/before-filling.jpg" alt="Before Filling" class="absolute top-0 left-0 max-w-none h-full object-cover" style="width: 100%;">
+                            <span class="absolute top-4 left-4 bg-amber-600/80 text-white text-xs px-3 py-1 rounded-full font-bold">BEFORE</span>
                         </div>
-                        <div>
-                            <p class="text-xs text-gray-500 mb-1">After Filling</p>
-                            <img src="assets/images/after-filling.jpg" alt="After Filling" class="case-img">
+
+                        <div id="slider-handle-1" class="comparison-slider flex items-center justify-center">
+                            <div class="w-8 h-8 rounded-full bg-white text-teal-800 shadow-md flex items-center justify-center text-xs font-bold">
+                                <i class="fa-solid fa-arrows-left-right"></i>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="mt-6 text-center space-y-1">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Composite Filling Case</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Seamless aesthetic restoration completed at our Mekanisa clinic.</p>
                     </div>
                 </div>
 
-                <!-- Brace Case -->
-                <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-2xl border border-gray-100 dark:border-slate-700 space-y-4 shadow-sm">
-                    <h3 class="font-bold text-lg text-slate-900 dark:text-white">Orthodontic Braces (ብሬስ)</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <p class="text-xs text-gray-500 mb-1">Before Braces</p>
-                            <img src="assets/images/before-brace.jpg" alt="Before Brace" class="case-img">
+                <!-- Case 2: Braces Treatment -->
+                <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-3xl border border-gray-100 dark:border-slate-700 shadow-lg">
+                    <div id="comparison-2" class="comparison-container w-full h-80 rounded-2xl select-none">
+                        <img src="assets/images/during-brace.jpg" alt="After Braces" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-teal-800/80 text-white text-xs px-3 py-1 rounded-full font-bold">AFTER</span>
+
+                        <div id="before-box-2" class="before-image">
+                            <img src="assets/images/before-brace.jpg" alt="Before Braces" class="absolute top-0 left-0 max-w-none h-full object-cover" style="width: 100%;">
+                            <span class="absolute top-4 left-4 bg-amber-600/80 text-white text-xs px-3 py-1 rounded-full font-bold">BEFORE</span>
                         </div>
-                        <div>
-                            <p class="text-xs text-gray-500 mb-1">During Treatment</p>
-                            <img src="assets/images/during-brace.jpg" alt="During Brace" class="case-img">
+
+                        <div id="slider-handle-2" class="comparison-slider flex items-center justify-center">
+                            <div class="w-8 h-8 rounded-full bg-white text-teal-800 shadow-md flex items-center justify-center text-xs font-bold">
+                                <i class="fa-solid fa-arrows-left-right"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Client Reviews Section -->
-    <section class="py-16 bg-gray-50 dark:bg-slate-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
-                <span class="text-teal-700 dark:text-amber-400 font-bold uppercase tracking-wider text-sm">Testimonials</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">What Our Patients Say</h2>
-            </div>
+                    <div class="mt-6 text-center space-y-1">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Orthodontic Braces Case</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Crowding correction and structural alignment over time.</p>
+                    </div>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
-                    <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-sm text-gray-600 dark:text-gray-300">"Dr. Nesria and nurse Mihret provided exceptionally clean and pain-free service. Highly recommended clinic in Mekanisa!"</p>
-                    <p class="text-xs font-semibold text-slate-900 dark:text-white">— Samuel T.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
-                    <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-sm text-gray-600 dark:text-gray-300">"Got my braces adjusted here with great professional care. Very clear communication and friendly environment."</p>
-                    <p class="text-xs font-semibold text-slate-900 dark:text-white">— Hana M.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 space-y-3">
-                    <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-sm text-gray-600 dark:text-gray-300">"Professional root canal treatment with zero complications. Thank you for saving my tooth!"</p>
-                    <p class="text-xs font-semibold text-slate-900 dark:text-white">— Dawit K.</p>
-                </div>
             </div>
         </div>
     </section>
 
     <script src="app.js"></script>
+    <script>
+        // Reusable Slider Function for Multiple Comparison Cards
+        function initComparison(containerId, beforeBoxId, handleId) {
+            const container = document.getElementById(containerId);
+            const beforeBox = document.getElementById(beforeBoxId);
+            const handle = document.getElementById(handleId);
+
+            if (!container || !beforeBox || !handle) return;
+
+            let isDragging = false;
+
+            const move = (clientX) => {
+                const rect = container.getBoundingClientRect();
+                let x = clientX - rect.left;
+                if (x < 0) x = 0;
+                if (x > rect.width) x = rect.width;
+                const percent = (x / rect.width) * 100;
+                beforeBox.style.width = percent + '%';
+                handle.style.left = percent + '%';
+            };
+
+            container.addEventListener('mousedown', (e) => { isDragging = true; move(e.clientX); });
+            window.addEventListener('mouseup', () => { isDragging = false; });
+            window.addEventListener('mousemove', (e) => { if (isDragging) move(e.clientX); });
+
+            container.addEventListener('touchstart', (e) => { isDragging = true; move(e.touches[0].clientX); });
+            window.addEventListener('touchend', () => { isDragging = false; });
+            window.addEventListener('touchmove', (e) => { if (isDragging) move(e.touches[0].clientX); });
+        }
+
+        // Initialize both sliders
+        initComparison('comparison-1', 'before-box-1', 'slider-handle-1');
+        initComparison('comparison-2', 'before-box-2', 'slider-handle-2');
+    </script>
 </body>
 </html>
