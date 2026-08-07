@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Dynamic Header & Mobile Navbar Injection
+    // 1. Dynamic Header & Mobile Navbar Injection (Price Menu Removed)
     const headerHTML = `
     <div class="bg-teal-900 text-white text-xs sm:text-sm py-2 px-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
@@ -26,11 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
             
             <!-- Desktop Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-6 font-medium text-sm">
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
                 <a href="index.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Home</a>
                 <a href="about.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">About Doctor</a>
                 <a href="services.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Treatments</a>
-                <a href="menu.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Price Menu</a>
                 <a href="cases.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Gallery & Reviews</a>
                 <a href="contact.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition">Contact</a>
             </nav>
@@ -59,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a href="index.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">Home</a>
                 <a href="about.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">About Doctor</a>
                 <a href="services.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">Treatments</a>
-                <a href="menu.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">Price Menu</a>
                 <a href="cases.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1 border-b border-gray-100 dark:border-slate-800">Gallery & Reviews</a>
                 <a href="contact.html" class="hover:text-teal-800 dark:hover:text-amber-400 transition py-1">Contact & Payment</a>
                 <a href="tel:0920603410" class="mt-2 inline-flex items-center justify-center bg-teal-600 text-white px-5 py-3 rounded-xl font-medium text-sm shadow-md hover:bg-teal-700 transition">
