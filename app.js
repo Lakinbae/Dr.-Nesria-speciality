@@ -78,14 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
             <div>
                 <p class="font-bold text-white text-sm mb-2">Social Channels</p>
                 <div class="flex flex-col gap-1 text-xs text-gray-400">
-                    <a href="https://t.me/DrNesriaDentalClinic" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-telegram mr-1"></i> Telegram Channel</a>
+                    <a href="https://t.me/+tLCbttotlPA4MWQ0" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-telegram mr-1"></i> Telegram Channel</a>
                     <a href="https://tiktok.com/@drnesriadental" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-tiktok mr-1"></i> TikTok Profile</a>
                 </div>
             </div>
             <div>
                 <p class="font-bold text-white text-sm mb-2">Team & Emergency</p>
                 <p class="text-xs text-gray-400">Main Dentist: Dr. Nesria Kamil</p>
-                <p class="text-xs text-gray-400">Nurse: Mihret</p>
+               
                 <p class="text-xs text-amber-400 mt-1">Sun: Emergency Cases Only</p>
             </div>
         </div>
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </footer>
 
     <!-- Floating Telegram Quick Chat Button -->
-    <a href="https://t.me/DrNesriaDentalClinic" target="_blank" aria-label="Chat on Telegram" class="fixed bottom-6 right-6 z-50 bg-sky-500 hover:bg-sky-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
+    <a href="https://t.me/+tLCbttotlPA4MWQ0" target="_blank" aria-label="Chat on Telegram" class="fixed bottom-6 right-6 z-50 bg-sky-500 hover:bg-sky-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
         <i class="fa-brands fa-telegram text-2xl"></i>
     </a>`;
 
